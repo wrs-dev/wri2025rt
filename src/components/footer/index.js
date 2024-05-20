@@ -16,23 +16,23 @@ const navigation = {
     },
     {
       name: "Visit WRI '24 Sponsors",
-      href: '/sponsors#icons',
-      target: '_self',
+      href: 'https://wri.wheel-rail-seminars.com/sponsors#icons',
+      target: '_blank',
     },
   ],
   support: [
     {
       name: 'WRI 2024 Chicago',
       href: 'https://wri.wheel-rail-seminars.com',
-      target: '_self' },
+      target: '_blank' },
     {
       name: 'WRI 2025 HH Kansas City',
       href: 'https://wri2025hh.wheel-rail-seminars.com',
-      target: '_self',
+      target: '_blank',
     },
     {
       name: 'WRI 2025 RT Seattle',
-      href: 'https://wri2025rt.wheel-rail-seminars.com',
+      href: '/',
       target: '_self',
     },
     { name: 'Info Zone/Expo Zone', href: '#', target: '_self' },
