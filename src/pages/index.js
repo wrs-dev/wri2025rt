@@ -39,7 +39,7 @@ export default function Home({ title, description, socialImage }) {
         </p>
         <p className="mb-6">
           <span className="font-extrabold font-wri text-wri-red">
-            <a className="font-extrabold font-wri text-wri-red" href="https://wri2025.hh.wheel-rail-seminars.com/" target="_blank">WRI 2025 Heavy Haul Conference:</a>
+            <a className="font-extrabold font-wri text-wri-red" href="https://wri2025hh.wheel-rail-seminars.com/" target="_blank">WRI 2025 Heavy Haul Conference:</a>
           </span>{' '}
           Specifically tailored for the heavy haul (freight) sector, focusing on
           the unique challenges and advancements in this area of the railroad
