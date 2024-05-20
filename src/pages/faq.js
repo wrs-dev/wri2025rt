@@ -7,7 +7,7 @@ import IconsRT from '@/components/icons/iconsRT';
 import Registration from '@/components/registration';
 import { Disclosure } from '@headlessui/react';
 import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline';
-import Banner from '@/components/banner';
+import Banner25RT from '@/components/banner/wri25RT';
 
 const faqs = [
   {
@@ -74,7 +74,7 @@ const faq = () => {
   return (
     <main className="bg-white">
       <Navigation />
-      <Banner />
+      <Banner25RT />
       <IconsRT />
       <div className="seminar-about-text" id="faqs">
         <div className="px-12 mx-auto">
