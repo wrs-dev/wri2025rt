@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Animation from '@/components/animations/anim2025HH';
+import Animation from '@/components/animations/anim2025RT';
 
 const Header = () => {
   return (

@@ -8,12 +8,19 @@ import SponsorCta from '@/components/sponsors/sponsor-cta';
 import SponsorsPage from '@/components/sponsors/sponsorPage';
 import Banner from '@/components/banner';
 
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "WRI 2025 Heavy Haul | Sponsors",
+      description: "Registration for the 29th Annual Wheel/Rail Interaction Conference (WRI)",
+      socialImage: "/wri2025rt-social.png" 
+    }
+  };
+}
+
 const sponsors = () => {
   return (
     <main className="bg-white">
-      <Head>
-        <title>WRI 2024 || Sponsor</title>
-      </Head>
       <Navigation />
       <Banner />
       <IconLinks />
