@@ -78,7 +78,7 @@ function App({ Component, pageProps }) {
   };
 
   return (
-    <PlausibleProvider domain="wri2025hh.wheel-rail-seminars.com">
+    <PlausibleProvider domain="wri2025rt.wheel-rail-seminars.com">
       <Layout {...getLayoutProps()}>
         <Component {...pageProps} />
       </Layout>
