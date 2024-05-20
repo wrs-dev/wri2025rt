@@ -9,9 +9,9 @@ export default function Navigation() {
   const router = useRouter();
 
   // function to determine if a link is active
-  const isActive = paths => {
+  const isActive = (paths) => {
     paths = Array.isArray(paths) ? paths : [paths]; // Ensure paths is always an array
-    return paths.some(path => {
+    return paths.some((path) => {
       if (path === '/') {
         return router.pathname === path; // Exact match for the root path
       }
@@ -98,7 +98,7 @@ export default function Navigation() {
             >
               <Popover.Panel className="absolute z-10 w-screen max-w-md mt-3 overflow-hidden bg-white shadow-lg rounded-3xl ring-1 ring-gray-900/5">
                 <div className="p-4">
-                  {links.map(item => (
+                  {links.map((item) => (
                     <div
                       key={item.name}
                       className="relative flex items-center p-4 text-sm rounded-lg group gap-x-6 hover:bg-sky-100"
@@ -245,7 +245,7 @@ export default function Navigation() {
                   >
                     Home
                   </a>
-                  <a
+                  {/*<a
                     href="/rail-transit-seminar#icons"
                     className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
                   >
@@ -286,7 +286,7 @@ export default function Navigation() {
                     className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
                   >
                     InfoZone
-                  </a>
+                  </a>*/}
                   <a
                     href="/faq#faqs"
                     className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"

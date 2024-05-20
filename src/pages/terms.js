@@ -2,22 +2,29 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '@/components/navigation'
-import Banner from '@/components/banner';
+import Banner25RT from '@/components/banner/wri25RT';
 import Registration from '@/components/registration';
 import SponsorsCloud from '@/components/sponsors';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "WRI Wheel Rail Interaction Conference | Terms, Conditions, Cancellation and Refund Policy",
+      description: "Frequently Asked Questions for the 29th Annual Wheel/Rail Interaction Conference (WRI)",
+      socialImage: "/wri2024-social.png" 
+    }
+  };
+}
+
 export default function Terms() {
   return (
     <main className="bg-white">
-      <Head>
-        <title>WRI 2024 || Privacy Policy</title>
-      </Head>
       <Navigation />
-      <Banner />
-      <div className="max-w-5xl pb-40 mx-auto">
+      <Banner25RT />
+      <div className="max-w-5xl px-4 pb-40 mx-auto">
         <div className="privacy-policy" id="terms">
           {/* T&C */}
           <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">

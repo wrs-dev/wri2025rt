@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '@/components/navigation';
 import IconLinks from '@/components/icons';
-import Banner from '@/components/banner';
+import Banner25RT from '@/components/banner/wri25RT';
 
 export async function getStaticProps() {
   return {
@@ -19,7 +19,7 @@ export default function Legal() {
   return (
     <main className="bg-white">
       <Navigation />
-      <Banner />
+      <Banner25RT />
       <div className="max-w-5xl pb-40 mx-auto">
         <div className="pb-40 privacy-container" id="privacy">
           <div className="privacy-policy">

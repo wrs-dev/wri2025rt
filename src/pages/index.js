@@ -25,10 +25,10 @@ export default function Home({ title, description, socialImage }) {
       <Banner25RT />
       <IconsRT />
       <div className="pb-40 about-container font-wri" id="about">
-        <h1 className="mt-2 mb-2 text-3xl font-extrabold text-center sm:text-5xl font-wri">
+        <h1 className="mt-2 mb-2 text-2xl font-extrabold text-center sm:text-5xl font-wri">
           Welcome to WRI <span className="font-light font-wri">2025</span> RT{' '}
         </h1>
-        <h2 className="mb-6 text-4xl font-light text-center sm:text-5xl font-wri text-wri-blue">
+        <h2 className="mb-6 text-3xl font-light text-center sm:text-5xl font-wri text-wri-blue">
           Rail Transit Conference
         </h2>
         <p className="mb-6 justify-left">
