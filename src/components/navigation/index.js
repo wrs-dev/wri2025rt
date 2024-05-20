@@ -23,17 +23,17 @@ export default function Navigation() {
     {
       name: 'Principles Course',
       description: 'Coming Soon',
-      href: '/#',
+      href: '#',
       icon: 'principles-icon.svg',
       background: 'bg-wri-green',
       isExternal: false,
     },
     {
-      name: 'Heavy Haul Seminar',
+      name: 'Rail Transit Seminar',
       description: 'Coming Soon',
-      href: '/E',
-      icon: 'heavy-haul-icon.svg',
-      background: 'bg-wri-red',
+      href: '#',
+      icon: 'rail-transit.svg',
+      background: 'bg-wri-blue',
       isExternal: false,
     },
   ];
