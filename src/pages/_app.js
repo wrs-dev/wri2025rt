@@ -71,7 +71,7 @@ function App({ Component, pageProps }) {
   const getLayoutProps = () => {
     const { title, description, socialImage } = pageProps;
     return {
-      title: title || 'WRI 2025 RT Seattle',
+      title: title || 'WRI 2025 Rail Transit Conference Seattle',
       description: description || '30th Annual Wheel Rail Interaction Conference',
       socialImage: socialImage || '/wri2025rt-social.png',
     };
