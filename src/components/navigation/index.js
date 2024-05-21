@@ -205,18 +205,18 @@ export default function Navigation() {
             target="_blank"
             className="text-sm leading-6 nav-link lg:text-xl text-wri-blue"
           >
-            WRS
+            Wheel Rail Seminars
           </a>
           <a
             href="http://www.interfacejournal.com/"
             target="_blank"
-            className="nav-link"
+            className="text-sm leading-6 nav-link min-w-8 min-h-8 lg:text-xl"
           >
             <img
               src="/ij-icon.svg"
-              className="w-8 h-8 min-w-8 min-h-8"
+              className="w-8 h-8 pr-2"
               alt="Interface Journal"
-            />
+            />Interface Journal
           </a>
         </Popover.Group>
         <Dialog
