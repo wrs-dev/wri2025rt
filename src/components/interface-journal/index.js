@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ChevronDoubleRightIcon } from '@heroicons/react/16/solid';
 import { motion } from 'framer-motion';
+import useSWR from 'swr';
 
 // Define animation variants for the icon
 const iconVariants = {
@@ -10,7 +12,42 @@ const iconVariants = {
   },
 };
 
+// Fetcher function to get the RSS feed data from the serverless function
+const fetcher = (url) => fetch(url).then((res) => res.text());
+
+// Parse the RSS feed data
+const parseRSS = (rss) => {
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(rss, "application/xml");
+  const items = Array.from(xml.querySelectorAll("item")).map((item) => ({
+    title: item.querySelector("title").textContent,
+    link: item.querySelector("link").textContent,
+    description: item.querySelector("description").textContent,
+    pubDate: item.querySelector("pubDate").textContent,
+  }));
+  return items;
+};
+
+// Sanitize HTML
+const sanitizeHTML = (html) => {
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = html;
+  return tempDiv.textContent || tempDiv.innerText || '';
+};
+
 export default function InterfaceJournal() {
+  const { data, error } = useSWR('/.netlify/functions/fetch-rss', fetcher);
+  const [articleImage, setArticleImage] = useState('');
+
+  useEffect(() => {
+    setArticleImage('/ij-march-2024.webp');
+  }, []);
+
+  if (error) return <div>Failed to load articles</div>;
+  if (!data) return <div>Loading...</div>;
+
+  const articles = parseRSS(data);
+
   return (
     <div className="p-6 bg-white">
       <h1 className="relative inline-block capitalize text-xl md:text-2xl font-bold text-black after:absolute after:bg-wri-yellow after:bottom-0 after:left-0 after:h-0.5 after:w-full">
@@ -21,11 +58,11 @@ export default function InterfaceJournal() {
           <Image
             src="/ij-logo.png"
             alt="Interface Journal"
-            width={225} // Reduced width to 75% of original
-            height={78} // Reduced height to 75% of original
+            width={225}
+            height={78}
             sizes="(max-width: 300px) 100vw, 300px"
             loading="lazy"
-            className="w-auto h-auto" // Ensure the image maintains its aspect ratio
+            className="w-auto h-auto"
           />
         </figure>
       </div>
@@ -36,38 +73,37 @@ export default function InterfaceJournal() {
           resolve them on railroads and transit systems around the world.
         </p>
       </div>
-      <h1 className="mt-10 text-2xl font-bold text-wri-mid-blue">
-        Mitigating Rolling Contact Fatigue: An Overview for 2023{' '}
-      </h1>
-      <div className="flex flex-col mt-8 xl:flex-row xl:items-start">
-        <div className="w-full xl:w-[270px] mb-6 xl:mb-0">
-          <Image
-            src="/ij-march-2024.webp"
-            alt="interface journal post grind stud"
-            width={640}
-            height={395}
-            sizes="(max-width: 400px) 100vw, 500px"
-            loading="lazy"
-            className="w-auto h-auto" // Ensure the image maintains its aspect ratio
-          />
-        </div>
-        <div className="xl:w-[calc(100%-300px)] xl:pl-6">
-          <p className="text-gray-800">
-            Rolling contact fatigue (RCF) affects railroads and transit systems
-            globally. The effects of RCF damage range from poor ride quality and
-            excessive noise, to shelling and spalling so deep and widespread that
-            rail sections must be replaced. Over time, the railroad and transit
-            industries have developed tools to detect and measure RCF and a suite
-            of techniques to mitigate it…{' '}
-            <a
-              className="text-wri-red"
-              href="https://interfacejournal.com/archives/33972"
-            >
-              <span className="text-sm">[continued]</span>
-            </a>
-          </p>
-        </div>
-      </div>
+      {articles.length > 0 && (
+        <>
+          <h1 className="mt-10 text-2xl font-bold text-wri-mid-blue">
+            {articles[0].title}
+          </h1>
+          <div className="flex flex-col mt-8 xl:flex-row xl:items-start">
+            <div className="w-full xl:w-[270px] mb-6 xl:mb-0">
+              <Image
+                src={articleImage}
+                alt="Interface Journal Post"
+                width={640}
+                height={395}
+                sizes="(max-width: 400px) 100vw, 500px"
+                loading="lazy"
+                className="w-auto h-auto"
+              />
+            </div>
+            <div className="xl:w-[calc(100%-300px)] xl:pl-6">
+              <p className="text-gray-800">
+                {sanitizeHTML(articles[0].description)}{' '}
+                <a
+                  className="text-wri-red"
+                  href={articles[0].link}
+                >
+                  <span className="text-sm">[continued]</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </>
+      )}
       <div className="flex items-center mt-6">
         <a
           href="https://interfacejournal.com/"
