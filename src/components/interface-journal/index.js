@@ -20,10 +20,11 @@ const parseRSS = (rss) => {
   const parser = new DOMParser();
   const xml = parser.parseFromString(rss, "application/xml");
   const items = Array.from(xml.querySelectorAll("item")).map((item) => ({
-    title: item.querySelector("title").textContent,
-    link: item.querySelector("link").textContent,
-    description: item.querySelector("description").textContent,
-    pubDate: item.querySelector("pubDate").textContent,
+    title: item.querySelector("title")?.textContent || '',
+    link: item.querySelector("link")?.textContent || '',
+    description: item.querySelector("description")?.textContent || '',
+    pubDate: item.querySelector("pubDate")?.textContent || '',
+    imageURL: item.querySelector("enclosure")?.getAttribute('url') || '', // Check for image in enclosure
   }));
   return items;
 };
@@ -35,18 +36,46 @@ const sanitizeHTML = (html) => {
   return tempDiv.textContent || tempDiv.innerText || '';
 };
 
+// Function to extract image URL from article
+const extractImageURL = (article) => {
+  // Check for custom image URL field first
+  if (article.imageURL) {
+    console.log('Custom Image URL:', article.imageURL);
+    return article.imageURL;
+  }
+  // Fallback to extracting from description
+  console.log('Description:', article.description);
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = article.description;
+  const imgTag = tempDiv.querySelector('img');
+  const srcAttr = imgTag ? imgTag.getAttribute('src') : '';
+  console.log('Extracted src:', srcAttr);
+  return srcAttr ? srcAttr : '/default-image.webp'; // Fallback to a default image if no image is found
+};
+
 export default function InterfaceJournal() {
   const { data, error } = useSWR('/.netlify/functions/fetch-rss', fetcher);
   const [articleImage, setArticleImage] = useState('');
+  const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    setArticleImage('/ij-march-2024.webp');
-  }, []);
+    if (data) {
+      const parsedArticles = parseRSS(data);
+      console.log('Parsed Articles:', parsedArticles);
+      setArticles(parsedArticles);
+    }
+  }, [data]);
+
+  useEffect(() => {
+    if (articles.length > 0) {
+      const newImageURL = extractImageURL(articles[0]);
+      console.log('Extracted Image URL:', newImageURL);
+      setArticleImage(newImageURL);
+    }
+  }, [articles]);
 
   if (error) return <div>Failed to load articles</div>;
   if (!data) return <div>Loading...</div>;
-
-  const articles = parseRSS(data);
 
   return (
     <div className="p-6 bg-white">
