@@ -57,7 +57,7 @@ export default function Home({ title, description, socialImage }) {
           rail and subway operations. Next year, the WRI 2025 Rail Transit
           Conference will be held in{' '}
           <span className="font-extrabold font-wri">
-            Seattle, WA in the Fall of 2025.
+            Seattle, WA from August 26-28, 2025.
           </span>
         </p>
         <p className="mb-6">

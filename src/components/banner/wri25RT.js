@@ -20,7 +20,7 @@ const Banner2025RT = () => {
             Seattle, WA
           </h1>
           <h1 className="text-4xl text-center text-white sm:text-6xl text-shadow-outline">
-            Fall 2025
+          August 26-28, 2025
           </h1>
         </div>
       </div>
