@@ -19,12 +19,12 @@ export default function InfoZoneSection() {
                   conference venue that serves as a prime location for sponsors to
                   showcase their brands to a highly engaged and diverse audience.{' '}
                 </p>
-                <Link
+                {/*<Link
                   className="pt-4 underline text-wri-red"
                   href="/2024-Final-Sponsorship-kit.pdf"
                 >
                   Learn how to become a sponsor [PDF]
-                </Link>
+                </Link>*/}
               </li>
               <li>
                 <figure className="relative w-full h-0 pb-[95.31%]">
@@ -52,12 +52,12 @@ export default function InfoZoneSection() {
                   wheel/rail interaction. These sessions are built into the Heavy
                   Haul Seminar program and designed for small group interaction.{' '}
                 </p>
-                <Link
+                {/*<Link
                   className="pt-4 underline text-wri-green"
                   href="/infozone#infozone"
                 >
                   Visit the InfoZone page!
-                </Link>
+                </Link>*/}
               </li>
               <li>
                 <figure className="relative w-full h-0 pb-[95.31%]">

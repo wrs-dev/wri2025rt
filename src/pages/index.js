@@ -1,6 +1,7 @@
 import Navigation from '@/components/navigation';
 import IconsRT from '@/components/icons/iconsRT';
 import Intro from '@/components/intro';
+import Reviews from '@/components/reviews';
 import Banner25RT from '@/components/banner/wri25RT';
 import InfoZoneSection from '@/components/infozone/infoZoneSection';
 import InterfaceJournal from '@/components/interface-journal';
@@ -74,6 +75,7 @@ export default function Home({ title, description, socialImage }) {
         </p>
       </div>
       <Intro />
+      <Reviews />
       <InfoZoneSection />
       <section className="my-12">
         <div className="container mx-auto">

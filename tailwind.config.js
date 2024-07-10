@@ -30,17 +30,26 @@ module.exports = {
         'wri-yellow': '#FDB913', 
         'wri-gray': '#3B4245',
         'wri-neutral': '#d1d1d1',
-      },      
+      },
       animation: {
+        'fade-in': 'fade-in 0.5s linear forwards',
+        marquee: 'marquee var(--marquee-duration) linear infinite',
         'loop-scroll': 'loop-scroll 100s linear infinite',
       },
       keyframes: {
+        'fade-in': {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        marquee: {
+          '100%': { transform: 'translateY(-50%)' },
+        },
         'loop-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
         },
       },
-      aspectRatio: { // Adding aspect-ratio utilities
+      aspectRatio: {
         '16/9': [16, 9],
         '4/3': [4, 3],
         '1/1': [1, 1],
