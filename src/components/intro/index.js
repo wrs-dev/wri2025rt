@@ -10,7 +10,9 @@ export default function Intro() {
           <div className="grid grid-cols-1 mx-auto max-w-7xl gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {/* Card 1 */}
             <article className="flex flex-col items-start border-b-4 bg-gradient-to-t from-white via-white to-transparent border-wri-yellow">
-              <div className="relative w-full h-0 pb-[64.51%]"> {/* 529 / 820 ≈ 64.51% */}
+              <div className="relative w-full h-0 pb-[64.51%]">
+                {' '}
+                {/* 529 / 820 ≈ 64.51% */}
                 <Image
                   src="/rt-venue.webp"
                   alt="Continuing Education"
@@ -24,17 +26,12 @@ export default function Intro() {
               <div className="flex flex-col items-center max-w-xl mx-auto">
                 <div className="relative px-10 pb-10 group">
                   <div className="relative flex items-center justify-center mt-8 gap-x-2">
-                    <Image
-                      src="/WRI.png"
-                      alt="WRI"
-                      width={76}
-                      height={26}
-                      className="bg-gray-100"
-                      loading="lazy"
-                    />
                     <div className="text-sm leading-6">
                       <h2 className="font-sans text-2xl font-bold text-wri-blue">
-                        for Continuing Education
+                        <span className="text-3xl font-extrabold text-black font-wri">
+                          WRI{' '}
+                        </span>
+                        Continuing Education
                       </h2>
                     </div>
                   </div>
@@ -50,7 +47,9 @@ export default function Intro() {
             </article>
             {/* Card 2 */}
             <article className="flex flex-col items-start border-b-4 bg-gradient-to-t from-white via-white to-transparent border-wri-yellow">
-              <div className="relative w-full h-0 pb-[64.51%]"> {/* 529 / 820 ≈ 64.51% */}
+              <div className="relative w-full h-0 pb-[64.51%]">
+                {' '}
+                {/* 529 / 820 ≈ 64.51% */}
                 <Image
                   src="/rt-presentations.webp"
                   alt="Technical Presentations"
@@ -64,17 +63,12 @@ export default function Intro() {
               <div className="flex flex-col items-center max-w-xl mx-auto">
                 <div className="relative px-10 pb-10 group">
                   <div className="relative flex items-center justify-center mt-8 gap-x-2">
-                    <Image
-                      src="/WRI.png"
-                      alt="WRI"
-                      width={76}
-                      height={26}
-                      className="bg-gray-100"
-                      loading="lazy"
-                    />
                     <div className="text-sm leading-6">
                       <h2 className="font-sans text-2xl font-bold text-wri-blue">
-                        for Technical Presentations
+                        <span className="text-3xl font-extrabold text-black font-wri">
+                          WRI{' '}
+                        </span>
+                        Technical Presentations
                       </h2>
                     </div>
                   </div>
@@ -89,7 +83,9 @@ export default function Intro() {
             </article>
             {/* Card 3 */}
             <article className="flex flex-col items-start border-b-4 bg-gradient-to-t from-white via-white to-transparent border-wri-yellow">
-              <div className="relative w-full h-0 pb-[64.51%]"> {/* 529 / 820 ≈ 64.51% */}
+              <div className="relative w-full h-0 pb-[64.51%]">
+                {' '}
+                {/* 529 / 820 ≈ 64.51% */}
                 <Image
                   src="/rt-networking.webp"
                   alt="Professional Networking"
@@ -103,17 +99,12 @@ export default function Intro() {
               <div className="flex flex-col items-center max-w-xl mx-auto">
                 <div className="relative px-10 pb-10 group">
                   <div className="relative flex items-center justify-center mt-8 gap-x-2">
-                    <Image
-                      src="/WRI.png"
-                      alt="WRI"
-                      width={76}
-                      height={26}
-                      className="bg-gray-100"
-                      loading="lazy"
-                    />
                     <div className="text-sm leading-6">
                       <h2 className="font-sans text-2xl font-bold text-wri-blue">
-                        for Professional Networking
+                        <span className="text-3xl font-extrabold text-black font-wri">
+                          WRI{' '}
+                        </span>
+                        Professional Networking
                       </h2>
                     </div>
                   </div>
