@@ -26,12 +26,14 @@ export default function Intro() {
               <div className="flex flex-col items-center max-w-xl mx-auto">
                 <div className="relative px-10 pb-10 group">
                   <div className="relative flex items-center justify-center mt-8 gap-x-2">
-                    <div className="text-sm leading-6">
-                      <h2 className="font-sans text-2xl font-bold text-wri-blue">
-                        <span className="text-3xl font-extrabold text-black font-wri">
+                    <div className="w-full text-sm leading-6">
+                      <h2 className="font-sans text-2xl font-bold text-center text-wri-blue">
+                        <span className="block text-3xl font-extrabold text-black font-wri sm:inline">
                           WRI{' '}
                         </span>
-                        Continuing Education
+                        <span className="block sm:inline">
+                          Continuing Education
+                        </span>
                       </h2>
                     </div>
                   </div>
@@ -63,12 +65,14 @@ export default function Intro() {
               <div className="flex flex-col items-center max-w-xl mx-auto">
                 <div className="relative px-10 pb-10 group">
                   <div className="relative flex items-center justify-center mt-8 gap-x-2">
-                    <div className="text-sm leading-6">
-                      <h2 className="font-sans text-2xl font-bold text-wri-blue">
-                        <span className="text-3xl font-extrabold text-black font-wri">
+                    <div className="w-full text-sm leading-6">
+                      <h2 className="font-sans text-2xl font-bold text-center text-wri-blue">
+                        <span className="block text-3xl font-extrabold text-black font-wri sm:inline">
                           WRI{' '}
                         </span>
-                        Technical Presentations
+                        <span className="block sm:inline">
+                          Technical Presentations
+                        </span>
                       </h2>
                     </div>
                   </div>
@@ -99,12 +103,14 @@ export default function Intro() {
               <div className="flex flex-col items-center max-w-xl mx-auto">
                 <div className="relative px-10 pb-10 group">
                   <div className="relative flex items-center justify-center mt-8 gap-x-2">
-                    <div className="text-sm leading-6">
-                      <h2 className="font-sans text-2xl font-bold text-wri-blue">
-                        <span className="text-3xl font-extrabold text-black font-wri">
+                    <div className="w-full text-sm leading-6">
+                      <h2 className="font-sans text-2xl font-bold text-center text-wri-blue">
+                        <span className="block text-3xl font-extrabold text-black font-wri sm:inline">
                           WRI{' '}
                         </span>
-                        Professional Networking
+                        <span className="block sm:inline">
+                          Professional Networking
+                        </span>
                       </h2>
                     </div>
                   </div>
