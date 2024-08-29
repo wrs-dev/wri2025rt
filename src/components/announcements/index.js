@@ -1,9 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function WRIAnnouncements() {
   return (
     <div className="w-full bg-gray-100">
-      {/* Adjust the width as needed */}
       <div className="p-8 text-4xl font-bold text-wri-dark-blue bg-wri-yellow">
         WRI Announcements
       </div>
@@ -19,38 +19,32 @@ export default function WRIAnnouncements() {
           Conference to be held in Kansas City, MO from June 10-12, 2025 and WRI
           2025 Rail Transit Conference to be held in Seattle, WA in the Fall of
           2025.{" "}
-          <a
-            href="https://wheel-rail-seminars.com/"
-            target="_blank"
-            className="text-wri-red"
-          >
-            See more details
-          </a>
+          <Link href="https://wheel-rail-seminars.com/" passHref legacyBehavior>
+            <a target="_blank" rel="noopener noreferrer" className="text-wri-red">
+              See more details...
+            </a>
+          </Link>
         </p>
         <h1 className="mb-1 text-2xl font-bold text-wri-dark-blue">
-          Congratulations Stuart Grassie, the WRI 2024 Worth Award Winner
+          Fueling the Future LinkedIn Article
         </h1>
         <div className="flex flex-col items-start mt-2 xl:flex-row">
           <Image
-            src="/stuart-grassie-worth-award-250px.jpg"
-            alt="Stuart Grassie Worth Award"
-            width={250}
-            height={250}
+            src="/sfu-donation.png"
+            alt="SFU donation article picture"
+            width={500}
+            height={260}
             className="mb-4 lg:mb-0 xl:mr-4"
-            style={{ width: "250px", height: "250px" }}
+            style={{ width: "500px", height: "260px" }}
           />
           <div className="flex flex-col mt-4 xl:mt-0">
-            <p>
-              Congratulations to Stuart Grassie for receiving this year's Art
-              Worth Award at the WRI '24 Conference in Chicago!
-            </p>
             <p className="mt-4">
-              The Art Worth Award presented by Wheel Rail Seminars at the annual
-              Wheel/Rail Interaction Conference, is named after Art Worth,
-              Retired as Senior Manager, Standards - Advanced Technology at
-              Canadian National, and was known throughout the industry as a
-              walking encyclopedia of railway engineering, standards, and
-              practices. The award is a Lifetime Achievement Recognition.{" "}
+              A generous gift from Gordon Bachinsky, Founder of Wheel Rail seminars, is broadening the learning experiences and professional networks for students in SFU's School of Sustainable Energy Engineering (SEE).{" "}
+              <Link href="https://www.linkedin.com/pulse/fueling-future-donors-innovative-award-ollvc/?trackingId=Jpu2PxgBKVXbS1yCDMHI8Q%3D%3D" passHref legacyBehavior>
+                <a target="_blank" rel="noopener noreferrer" className="text-wri-red">
+                  Read the article (requires log in)...
+                </a>
+              </Link>
             </p>
           </div>
         </div>
