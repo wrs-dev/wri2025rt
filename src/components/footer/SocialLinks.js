@@ -9,7 +9,7 @@ const socialLinks = [
 const SocialLinks = () => (
   <div className="flex space-x-6 md:order-2">
     {socialLinks.map(item => (
-      <a
+      
         key={item.name}
         href={item.href}
         target="_blank"
