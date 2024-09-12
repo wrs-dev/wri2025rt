@@ -25,28 +25,26 @@ export default function WRIAnnouncements() {
             </a>
           </Link>
         </p>
-        <h1 className="mb-1 text-2xl font-bold text-wri-dark-blue">
-          Fueling the Future LinkedIn Article
-        </h1>
-        <div className="flex flex-col items-start mt-2 xl:flex-row">
+        <div className="flex flex-col">
+          <h1 className="mb-1 text-2xl font-bold text-wri-dark-blue">
+            Fueling the Future LinkedIn Article
+          </h1>
           <Image
             src="/sfu-donation.png"
             alt="SFU donation article picture"
             width={500}
             height={260}
-            className="mb-4 lg:mb-0 xl:mr-4"
-            style={{ width: "500px", height: "260px" }}
+            className="mb-4"
+            style={{ width: "100%", height: "auto", maxWidth: "500px" }}
           />
-          <div className="flex flex-col mt-4 xl:mt-0">
-            <p className="mt-4">
-              A generous gift from Gordon Bachinsky, Founder of Wheel Rail seminars, is broadening the learning experiences and professional networks for students in SFU's School of Sustainable Energy Engineering (SEE).{" "}
-              <Link href="https://www.linkedin.com/pulse/fueling-future-donors-innovative-award-ollvc/?trackingId=Jpu2PxgBKVXbS1yCDMHI8Q%3D%3D" passHref legacyBehavior>
-                <a target="_blank" rel="noopener noreferrer" className="text-wri-red">
-                  Read the article (requires log in)...
-                </a>
-              </Link>
-            </p>
-          </div>
+          <p>
+            A generous gift from Gordon Bachinsky, Founder of Wheel Rail seminars, is broadening the learning experiences and professional networks for students in SFU's School of Sustainable Energy Engineering (SEE).{" "}
+            <Link href="https://give.sfu.ca/fueling-the-future" passHref legacyBehavior>
+              <a target="_blank" rel="noopener noreferrer" className="text-wri-red">
+                Read the article...
+              </a>
+            </Link>
+          </p>
         </div>
       </div>
     </div>
