@@ -1,12 +1,15 @@
 import Navigation from '@/components/navigation';
+import Banner25RT from '@/components/banner/wri25RT';
 import IconsRT from '@/components/icons/iconsRT';
 import Intro from '@/components/intro';
+import Registration from '@/components/registration';
+import SponsorCTA2 from '@/components/sponsors/sponsor-cta-2';
 import Reviews from '@/components/reviews';
-import Banner25RT from '@/components/banner/wri25RT';
 import InfoZoneSection from '@/components/infozone/infoZoneSection';
 import InterfaceJournal from '@/components/interface-journal';
 import WRIAnnouncements from '@/components/announcements';
 import SponsorsCloud from '@/components/sponsors';
+import Hotel from '@/components/hotel';
 
 export async function getStaticProps() {
   return {
@@ -19,12 +22,14 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ title, description, socialImage }) {
+export default function Home() {
   return (
     <main className="bg-white">
       <Navigation />
       <Banner25RT />
       <IconsRT />
+
+      {/* About Section (keeps your existing RT text) */}
       <div className="pb-40 about-container font-wri" id="about">
         <h1 className="mt-2 mb-2 text-2xl font-extrabold text-center sm:text-5xl font-wri">
           Welcome to WRI <span className="font-light font-wri">2025</span> RT{' '}
@@ -40,12 +45,16 @@ export default function Home({ title, description, socialImage }) {
         </p>
         <p className="mb-6">
           <span className="font-extrabold font-wri text-wri-red">
-            <a className="font-extrabold font-wri text-wri-red" href="https://wri2025hh.wheel-rail-seminars.com/" target="_blank">WRI 2025 Heavy Haul Conference:</a>
+            <a
+              className="font-extrabold font-wri text-wri-red"
+              href="https://wri2025hh.wheel-rail-seminars.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WRI 2025 Rail Transit Conference:
+            </a>
           </span>{' '}
-          Specifically tailored for the heavy haul (freight) sector, focusing on
-          the unique challenges and advancements in this area of the railroad
-          industry. Next year, the WRI 2025 Heavy Haul Conference will be held
-          in{' '}
+          Devoted to examining wheel/rail and vehicle/track interaction on light rail and subway operations. Next year, the WRI 2025 Rail Transit Conference will be held in{' '}
           <span className="font-extrabold font-wri">
             Kansas City, MO from June 10-12, 2025.
           </span>
@@ -58,7 +67,7 @@ export default function Home({ title, description, socialImage }) {
           rail and subway operations. Next year, the WRI 2025 Rail Transit
           Conference will be held in{' '}
           <span className="font-extrabold font-wri">
-            Seattle, WA from August 26-28, 2025.
+          Seattle, WA from August 26-28, 2025.
           </span>
         </p>
         <p className="mb-6">
@@ -74,9 +83,14 @@ export default function Home({ title, description, socialImage }) {
           registration!
         </p>
       </div>
+
       <Intro />
-      <Reviews />
+      <Registration />
       <InfoZoneSection />
+      <SponsorCTA2 />
+      <Reviews />
+
+      {/* Two-column layout for Interface Journal & Announcements */}
       <section className="my-12">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
@@ -85,7 +99,9 @@ export default function Home({ title, description, socialImage }) {
           </div>
         </div>
       </section>
-      <SponsorsCloud />
+      <Hotel />
+      {/* Temporarily remove sponsor cloud (commented out) */}
+      {/* <SponsorsCloud /> */}
     </main>
   );
 }
