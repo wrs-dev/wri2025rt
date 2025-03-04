@@ -5,33 +5,35 @@ export default function Hotel() {
   return (
     <section id="hotel" className="py-32 hare-hotel">
       <div className="container">
-        <div className="grid row">
+        {/* Using a grid with a single column gap structure like HH */}
+        <div className="grid grid-cols-1 gap-8">
+          {/* Left side: Hotel Title & Image */}
           <div className="col">
-            <h1 className="mb-4 relative inline-block capitalize text-xl md:text-2xl font-bold text-black after:absolute after:bg-wri-yellow after:bottom-0 after:left-0 after:h-0.5 after:w-full">
-              WRI 2024 HOST HOTEL
+            <h1 className="mb-4 text-2xl font-bold">
+              WRI 2025 RT – Host Hotel – Book your Room
             </h1>
             <div className="grid grid-cols-1">
               <figure>
                 <Image
-                  src="/loews-hotel-web.webp"
-                  alt="loews-hotel"
-                  width={'400'}
-                  height={'267'}
-                  className="w-full h-auto rounded-xl"
-                  loading="lazy"
+                  src="/Hyatt-Regency-Seattle-16x9.webp"
+                  alt="Hyatt Regency Seattle"
+                  width={400}
+                  height={225}
+                  className="w-full h-auto"
                 />
               </figure>
-              <div>
+              <div className="mt-4">
                 <div className="mb-6 text-3xl font-bold primary-color">
-                  Loews Chicago O’Hare Hotel
+                  Hyatt Regency Seattle
                 </div>
                 <div className="mb-8 text-lg font-bold">
-                  5300 N River Rd, Rosemont, IL 60018
+                  808 Howell St, Seattle, WA 98101
                 </div>
                 <a
-                  href="https://www.loewshotels.com/chicago-ohare/group-wheel-rail-interaction-24"
+                  href="https://www.hyatt.com/en-US/group-booking/SEARS/G-WRI5"
                   target="_blank"
-                  className="hidden inline-block px-4 py-2 text-xl font-bold border-4 shadow-xl rounded-xl bg-wri-yellow hover:bg-wri-green border-wri-dark-blue hover:border-wri-green text-wri-dark-blue hover:text-white"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 text-xl font-bold border-4 shadow-xl rounded-xl bg-wri-yellow hover:bg-wri-green border-wri-dark-blue hover:border-wri-green text-wri-dark-blue hover:text-white"
                 >
                   Reservations
                 </a>
@@ -39,43 +41,55 @@ export default function Hotel() {
             </div>
           </div>
 
+          {/* Right side: Reservation Info */}
           <div className="col">
             <h2>Making Reservations/Discounted Rate:</h2>
-            <p className="text-base mb-3.5">
-              {' '}
-              The Conference room Block at the Loews Chicago O'Hare Hotel has expired.  There are a limited number of rooms available through the Conference Coordinator.
+            <p className="mb-3.5 text-base">
+              You can use the Hyatt Regency Seattle&apos;s secure online reservation system
+              to book, modify, or cancel your reservation{' '}
+              <a
+                className="text-red-500 underline hover:text-blue-600"
+                href="https://www.hyatt.com/en-US/group-booking/SEARS/G-WRI5"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                here
+              </a>
+              .
             </p>
-            <p className="text-base mb-3.5">
-            If you require a hotel room for WRI '24, please contact:
+            <p className="mb-3.5 text-base">
+              Our discounted room rate is <b>TBD</b> per night.
             </p>
-            <p className="text-base mb-3.5">
-            Brandon Koenig at <a href="mailto:brandon@wheel-rail-seminars.com"> brandon@wheel-rail-seminars.com</a>
+            <p className="mb-3.5 text-base">
+              Reservations must be received on or before the cut-off date of{' '}
+              <b>Monday, July 21, 2025</b> (placeholder). Once our room block is full, you
+              may not be able to receive our special rate.
             </p>
-            <p className="text-base mb-3.5">
-            The Remaining Rooms will be on a first come basis and can not be guaranteed at this late date.
+            <p className="mb-3.5 text-base">
+              If you require additional reservations assistance, you may contact the hotel
+              reservation department at 1-XXX-XXX-XXXX and refer to the group by name:{' '}
+              <b>Wheel/Rail Interaction Rail Transit &apos;25 Seattle.</b>
             </p>
+
             <h2>Room Deposits/Guarantees:</h2>
-            <p className="text-base mb-3.5">
-              <b>
-                Hotel reservations requires a credit card guarantee to secure
-                your room reservation.
-              </b>
-               Should you need to cancel your reservation, reservations must be
-              canceled a minimum of 48 hours prior to arrival, 5PM hotel time,
-              to avoid a one night cancellation penalty.
+            <p className="mb-3.5 text-base">
+              <b>Hotel reservations require a credit card guarantee to secure your room.</b>{' '}
+              Should you need to cancel your reservation, reservations must be canceled a
+              minimum of 48 hours prior to arrival, 5PM hotel time, to avoid a one-night
+              cancellation penalty.
             </p>
+
             <h2>Reservation Confirmation:</h2>
-            <p className="text-base mb-3.5">
-              You will receive your hotel confirmation email directly from the
-              hotel.
+            <p className="mb-3.5 text-base">
+              You will receive your hotel confirmation email directly from the hotel.
             </p>
-            <p className="text-base mb-3.5">
+            <p className="mb-3.5 text-base">
               <b>
-                Reservation must be cancelled by 5:00pm, local hotel time, two
-                days prior to arrival date.
-              </b>
-               Failure to cancel by 5:00pm, 48 hours prior will result in the
-              loss of one night's room and tax on your credit card.
+                Reservation must be canceled by 5:00pm, local hotel time, two days prior to
+                arrival date.
+              </b>{' '}
+              Failure to cancel by 5:00pm, 48 hours prior will result in the loss of one
+              night&apos;s room and tax on your credit card.
             </p>
           </div>
         </div>
