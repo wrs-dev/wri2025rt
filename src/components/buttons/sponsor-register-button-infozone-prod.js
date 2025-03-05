@@ -11,10 +11,10 @@ const iconVariants = {
   },
 };
 
-const SponsorRegisterButtonPlatinum = () => {
+const SponsorRegisterButtonInfoZone = () => {
   return (
     <Link
-      href="https://cvent.me/7gNe5l"
+      href="https://cvent.me/xAmg2r"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -36,4 +36,4 @@ const SponsorRegisterButtonPlatinum = () => {
   );
 };
 
-export default SponsorRegisterButtonPlatinum;
+export default SponsorRegisterButtonInfoZone;
