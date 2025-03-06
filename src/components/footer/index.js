@@ -7,23 +7,75 @@ const navigation = {
   solutions: [
     { name: 'Home', href: '/', target: '_self' },
     { name: 'About WRI', href: '/#about', target: '_self' },
-    { name: 'Visit Wheel Rail Seminars', href: 'https://wheel-rail-seminars.com', target: '_blank' },
-    { name: 'Visit Interface Journal', href: 'https://interfacejournal.com/', target: '_blank' },
-    { name: "Visit WRI '24 Sponsors", href: 'https://wri.wheel-rail-seminars.com/sponsors#icons', target: '_blank' },
+    {
+      name: 'Visit Wheel Rail Seminars',
+      href: 'https://wheel-rail-seminars.com',
+      target: '_blank',
+    },
+    {
+      name: 'Visit Interface Journal',
+      href: 'https://interfacejournal.com/',
+      target: '_blank',
+    },
+    {
+      name: "Visit WRI '24 Sponsors",
+      href: 'https://wri.wheel-rail-seminars.com/sponsors#icons',
+      target: '_blank',
+    },
   ],
   support: [
-    { name: 'WRI 2024 Chicago', href: 'https://wri.wheel-rail-seminars.com', target: '_blank' },
-    { name: 'WRI 2025 HH Kansas City', href: '/', target: '_self' },
-    { name: 'WRI 2025 RT Seattle', href: 'https://wri2025rt.wheel-rail-seminars.com', target: '_blank' },
-    { name: 'Info Zone/Expo Zone', href: '#', target: '_self' },
-    { name: 'Become a Sponsor', href: '/2024-Final-Sponsorship-kit.pdf', target: '_blank' },
+    {
+      name: 'WRI 2024 Chicago',
+      href: 'https://wri.wheel-rail-seminars.com',
+      target: '_blank',
+    },
+    {
+      name: 'WRI 2025 HH Kansas City',
+      href: 'https://wri2025hh.wheel-rail-seminars.com',
+      target: '_blank',
+    },
+    {
+      name: 'WRI 2025 RT Seattle',
+      href: '/',
+      target: '_self',
+    },
+    {
+      name: 'Info Zone/Expo Zone',
+      href: '/#zones',
+      target: '_self',
+    },
+    {
+      name: 'Become a Sponsor',
+      href: '/sponsor-packages',
+      target: '_self',
+    },
   ],
   company: [
-    { name: 'Register Soon', href: '#', target: '_blank' },
-    { name: 'Seminar Pricing Packages', href: '#', target: '_self' },
-    { name: 'Hotel Reservations', href: '#', target: '_self' },
-    { name: 'FAQ', href: '/faq#icons', target: '_self' },
-    { name: 'Seminar Archive', href: 'http://archive.wheel-rail-seminars.com/us/downloads.php', target: '_blank' },
+    {
+      name: 'Register Now',
+      href: '/register',
+      target: '_blank',
+    },
+    {
+      name: 'Seminar Pricing Packages',
+      href: '/#register',
+      target: '_self',
+    },
+    {
+      name: 'Hotel Reservations',
+      href: '/#hotel',
+      target: '_self',
+    },
+    {
+      name: 'FAQ',
+      href: '/faq#icons',
+      target: '_self',
+    },
+    {
+      name: 'Seminar Archive',
+      href: 'http://archive.wheel-rail-seminars.com/us/downloads.php',
+      target: '_blank',
+    },
   ],
   legal: [
     { name: 'Terms', href: '/terms', target: '_self' },
