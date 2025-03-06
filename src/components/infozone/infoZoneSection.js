@@ -10,21 +10,22 @@ export default function InfoZoneSection() {
           <div className="col">
             <ul className="grid">
               <li>
-                <div className="text-4xl text-wri-blue">ExpoZone</div>
+                <div className="pt-8 text-4xl text-wri-blue">ExpoZone</div>
                 <span className="block pb-10 text-wri-blue">
-                  during the entire <br /> WRI 2024 Conference
+                  {/* removed text but kept yellow underline - temporary */}
                 </span>
                 <p>
                   The ExpoZone is a strategically designed space within the WRI
-                  conference venue that serves as a prime location for sponsors to
-                  showcase their brands to a highly engaged and diverse audience.{' '}
+                  conference venue that serves as a prime location for sponsors
+                  to showcase their brands to a highly engaged and diverse
+                  audience.{' '}
                 </p>
-                {/*<Link
+                <Link
                   className="pt-4 underline text-wri-red"
-                  href="/2024-Final-Sponsorship-kit.pdf"
+                  href="https://wri2025hh.wheel-rail-seminars.com/sponsor-packages"
                 >
-                  Learn how to become a sponsor [PDF]
-                </Link>*/}
+                  Join the 2025 ExpoZone!
+                </Link>
               </li>
               <li>
                 <figure className="relative w-full h-0 pb-[95.31%]">
@@ -43,21 +44,21 @@ export default function InfoZoneSection() {
           <div className="col">
             <ul className="grid">
               <li>
-                <div className="text-4xl text-wri-blue">InfoZone</div>
+                <div className="pt-8 text-4xl text-wri-blue">InfoZone</div>
                 <span className="block pb-10 text-wri-blue">
-                  included with the <br /> Heavy Haul Seminar
+                  {/* removed text but kept yellow underline - temporary */}
                 </span>
                 <p>
-                  Our InfoZone partners offer high-quality technical information on
-                  wheel/rail interaction. These sessions are built into the Heavy
-                  Haul Seminar program and designed for small group interaction.{' '}
+                  Our InfoZone partners offer high-quality technical information
+                  on wheel/rail interaction. These sessions are built into the
+                  program and designed for small group interaction.{' '}
                 </p>
-                {/*<Link
+                <Link
                   className="pt-4 underline text-wri-green"
-                  href="/infozone#infozone"
+                  href="https://wri2025hh.wheel-rail-seminars.com/sponsor-packages"
                 >
-                  Visit the InfoZone page!
-                </Link>*/}
+                  Get into the InfoZone!
+                </Link>
               </li>
               <li>
                 <figure className="relative w-full h-0 pb-[95.31%]">
