@@ -33,9 +33,6 @@ export default function SponsorCTA2() {
               <p className="mt-6 text-lg leading-8 text-gray-300">
                 The ExpoZone offers organizations effective, up-close exposure to decision makers.
                 </p>
-                <p className="mt-6 text-lg leading-8 text-gray-300">
-                Erica, do we want to put different text here to replace that of HH or just remove this sentence.
-              </p>
               <div className="flex items-center justify-center mt-10 gap-x-6 lg:justify-start">
                 <a
                   href="/sponsor-packages"
