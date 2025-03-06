@@ -15,7 +15,7 @@ export default function Hotel() {
             <div className="grid grid-cols-1">
               <figure>
                 <Image
-                  src="/Hyatt-Regency-Seattle-16x9.webp"
+                  src="/Hyatt-Regency-Seattle.webp"
                   alt="Hyatt Regency Seattle"
                   width={400}
                   height={225}
