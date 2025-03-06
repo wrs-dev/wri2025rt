@@ -21,7 +21,6 @@ const SponsorPackagesRT = () => {
           </h2>
         </div>
       </div>
-
       <SponsorsPackages />
     </main>
   );

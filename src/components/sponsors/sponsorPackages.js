@@ -11,7 +11,7 @@ import SponsorCtaPdf from '@/components/sponsors/sponsor-cta-pdf';
 
 export default function SponsorPackages() {
   return (
-    <div className="pb-24 bg-white sm:pt-12">
+    <div className="pb-2 bg-white sm:pt-12">
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         {/* Intro */}
         <section className="mb-24">
@@ -304,10 +304,8 @@ export default function SponsorPackages() {
               </p>
             </div>
           </div>
+          <SponsorCtaPdf />
         </section>
-
-        {/* Removed the final star note about Double Sponsorship */}
-        <SponsorCtaPdf />
       </div>
     </div>
   );
