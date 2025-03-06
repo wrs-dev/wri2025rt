@@ -168,7 +168,7 @@ export default function Navigation() {
               isActive('/#register') ? 'text-wri-red' : 'text-wri-blue'
             }`}
           >
-            Package Pricing
+            Pricing
           </a>
           <a
             href="/#hotel"
@@ -243,7 +243,7 @@ export default function Navigation() {
                     href="/#register"
                     className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
                   >
-                    Package Pricing
+                    Pricing
                   </a>
                   <a
                     href="/#hotel"
