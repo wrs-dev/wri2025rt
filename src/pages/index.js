@@ -45,7 +45,7 @@ export default function Home() {
           </span>{' '}
           is devoted to examining wheel/rail and vehicle/track interaction on light rail and subway operations. The conference will be held in{' '}
           <span className="font-extrabold font-wri">
-          Seattle, WA from August 26-28, 2025.
+          Seattle, WA from August 26-28, 2025.{' '}
           </span>
           Attendees will be from commuter rail systems, contractors, government regulators, researchers and consultants.
         </p>
