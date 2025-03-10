@@ -38,49 +38,16 @@ export default function Home() {
           Rail Transit Conference
         </h2>
         <p className="mb-6 justify-left">
-          Now in its 30th year, Wheel Rail Seminars is thrilled to announce some
-          exciting developments for the upcoming WRI Conference in 2025! To
-          better cater to the diverse needs of our attendees, the WRI Conference
-          will split into two specialized conferences:
-        </p>
-        <p className="mb-6">
-          <span className="font-extrabold font-wri text-wri-red">
-            <a
-              className="font-extrabold font-wri text-wri-red"
-              href="https://wri2025hh.wheel-rail-seminars.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              WRI 2025 Rail Transit Conference:
-            </a>
-          </span>{' '}
-          Devoted to examining wheel/rail and vehicle/track interaction on light rail and subway operations. Next year, the WRI 2025 Rail Transit Conference will be held in{' '}
-          <span className="font-extrabold font-wri">
-            Kansas City, MO from June 10-12, 2025.
-          </span>
-        </p>
-        <p className="mb-6">
+          Welcome to the 30th Anniversary of the Wheel Rail Interaction
+          Conference.{' '}
           <span className="font-extrabold font-wri text-wri-blue">
-            WRI 2025 Rail Transit Conference:
+            WRI 2025 Rail Transit Conference
           </span>{' '}
-          Devoted to examining wheel/rail and vehicle/track interaction on light
-          rail and subway operations. Next year, the WRI 2025 Rail Transit
-          Conference will be held in{' '}
+          is devoted to examining wheel/rail and vehicle/track interaction on light rail and subway operations. The conference will be held in{' '}
           <span className="font-extrabold font-wri">
           Seattle, WA from August 26-28, 2025.
           </span>
-        </p>
-        <p className="mb-6">
-          Each conference will feature a comprehensive Principles Course
-          meticulously crafted to meet the distinct needs of each discipline. We
-          believe this division will provide an enriched experience for all
-          participants, allowing for deeper insight, targeted discussions, and
-          enhanced networking opportunities.
-        </p>
-        <p className="mb-6">
-          Join us for these exceptional events designed to propel the railroad
-          community forward. Stay tuned for further updates and details on
-          registration!
+          Attendees will be from commuter rail systems, contractors, government regulators, researchers and consultants.
         </p>
       </div>
 
