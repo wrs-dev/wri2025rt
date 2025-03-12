@@ -190,7 +190,7 @@ export default function SponsorPackages() {
             </div>
             <div className="col-span-2">
               <p className="mb-1">
-                The InfoZone is an interactive learning environment designed to
+              For the first time this year, WRI is offering InfoZone sessions for the Rail Transit Conference. The InfoZone is an interactive learning environment designed to
                 augment the information presented at the annual WRI Conference.
                 Our InfoZone partners offer high‐quality technical content on
                 aspects of wheel/rail interaction that they know best, providing

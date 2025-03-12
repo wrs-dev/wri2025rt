@@ -27,7 +27,7 @@ export default function Hotel() {
                   Hyatt Regency Seattle
                 </div>
                 <div className="mb-8 text-lg font-bold">
-                  808 Howell St, Seattle, WA 98101
+                808 Howell Street Seattle, Washington, 98101 United States
                 </div>
                 <a
                   href="https://www.hyatt.com/en-US/group-booking/SEARS/G-WRI5"
@@ -58,7 +58,7 @@ export default function Hotel() {
               .
             </p>
             <p className="mb-3.5 text-base">
-              Our discounted room rate is <b>TBD</b> per night.
+              Our discounted room rate is <b>$269</b> per night.
             </p>
             <p className="mb-3.5 text-base">
               Reservations must be received on or before the cut-off date of{' '}
@@ -67,7 +67,7 @@ export default function Hotel() {
             </p>
             <p className="mb-3.5 text-base">
               If you require additional reservations assistance, you may contact the hotel
-              reservation department at 1-XXX-XXX-XXXX and refer to the group by name:{' '}
+              reservation department at (206) 973-1234 and refer to the group by name:{' '}
               <b>Wheel/Rail Interaction Rail Transit &apos;25 Seattle.</b>
             </p>
 

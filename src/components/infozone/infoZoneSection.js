@@ -22,7 +22,7 @@ export default function InfoZoneSection() {
                 </p>
                 <Link
                   className="pt-4 underline text-wri-red"
-                  href="https://wri2025hh.wheel-rail-seminars.com/sponsor-packages"
+                  href="/sponsor-packages"
                 >
                   Join the 2025 ExpoZone!
                 </Link>
@@ -49,13 +49,13 @@ export default function InfoZoneSection() {
                   {/* removed text but kept yellow underline - temporary */}
                 </span>
                 <p>
-                  Our InfoZone partners offer high-quality technical information
+                For the first time this year, WRI is offering InfoZone sessions for the Rail Transit Conference. Our InfoZone partners offer high-quality technical information
                   on wheel/rail interaction. These sessions are built into the
                   program and designed for small group interaction.{' '}
                 </p>
                 <Link
                   className="pt-4 underline text-wri-green"
-                  href="https://wri2025hh.wheel-rail-seminars.com/sponsor-packages"
+                  href="/sponsor-packages"
                 >
                   Get into the InfoZone!
                 </Link>
