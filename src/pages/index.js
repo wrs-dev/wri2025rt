@@ -25,6 +25,9 @@ export default function Home({ title, description, socialImage }) {
     <main className="bg-white">
       <Navigation />
       <Banner25RT />
+      <h3 className="mt-12 mb-6 text-xl font-light text-center sm:text-4xl font-wri">
+      Speakers and agenda to be announced soon!
+      </h3>
       <IconsRT />
       <div className="pb-40 about-container font-wri" id="about">
         <h1 className="mt-2 mb-2 text-2xl font-extrabold text-center sm:text-5xl font-wri">
