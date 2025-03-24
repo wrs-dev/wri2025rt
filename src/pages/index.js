@@ -27,6 +27,9 @@ export default function Home() {
     <main className="bg-white">
       <Navigation />
       <Banner25RT />
+      <h3 className="mt-12 mb-6 text-xl font-light text-center sm:text-4xl font-wri">
+        Click on the buttons below to review speakers, topics and abstracts for each seminar!
+        </h3>
       <IconsRT />
 
       {/* About Section (keeps your existing RT text) */}
