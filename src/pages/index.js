@@ -28,7 +28,7 @@ export default function Home() {
       <Navigation />
       <Banner25RT />
       <h3 className="mt-12 mb-6 text-xl font-light text-center sm:text-4xl font-wri">
-        Click on the buttons below to review speakers, topics and abstracts for each seminar!
+      Speakers and agenda to be announced soon!
         </h3>
       <IconsRT />
 
