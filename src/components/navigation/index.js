@@ -15,7 +15,7 @@ export default function Navigation() {
       if (path === '/') {
         return router.pathname === path; // Exact match for the root path
       }
-      return router.pathname.startsWith(path); // Prefix match for all other paths
+      return router.pathname.startsWith(path); // Prefix match for other paths
     });
   };
 
@@ -44,6 +44,7 @@ export default function Navigation() {
         className="flex items-center justify-center w-full px-4 mx-auto bg-white lg:px-8 md:px-10"
         aria-label="Global"
       >
+        {/* Mobile menu button */}
         <div className="flex lg:hidden">
           {!mobileMenuOpen && (
             <button
@@ -58,6 +59,7 @@ export default function Navigation() {
         </div>
 
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
+          {/* Home link */}
           <a
             href="/"
             className={`text-sm leading-6 nav-link lg:text-xl ${
@@ -66,6 +68,8 @@ export default function Navigation() {
           >
             Home
           </a>
+
+          {/* WRI Seminars dropdown */}
           <Popover className="relative hidden md:flex">
             <Popover.Button
               className={`flex items-center text-sm leading-6 nav-link lg:text-xl ${
@@ -73,9 +77,9 @@ export default function Navigation() {
                   '/rail-transit-seminar',
                   '/rail-transit-seminar-bios-abstracts',
                   '/principles-course',
-                  'principles-course-bios-abstracts',
+                  '/principles-course-bios-abstracts',
                   '/heavy-haul-seminar',
-                  'heavy-haul-seminar-bios-abstracts',
+                  '/heavy-haul-seminar-bios-abstracts',
                 ])
                   ? 'text-wri-red'
                   : 'text-wri-blue'
@@ -98,6 +102,7 @@ export default function Navigation() {
             >
               <Popover.Panel className="absolute z-10 w-screen max-w-md mt-3 overflow-hidden bg-white shadow-lg rounded-3xl ring-1 ring-gray-900/5">
                 <div className="p-4">
+                  {/* Seminar links */}
                   {links.map((item) => (
                     <div
                       key={item.name}
@@ -116,10 +121,10 @@ export default function Navigation() {
                         <a
                           href={item.href}
                           className="block text-sm lg:text-xl text-wri-blue"
-                          target={item.isExternal ? '_blank' : undefined} // Conditionally set target attribute
+                          target={item.isExternal ? '_blank' : undefined}
                           rel={
                             item.isExternal ? 'noopener noreferrer' : undefined
-                          } // Best practice for security
+                          }
                         >
                           {item.name}
                           <span className="absolute inset-0" />
@@ -128,28 +133,36 @@ export default function Navigation() {
                       </div>
                     </div>
                   ))}
+
+                  {/* Link to 2025 Heavy Haul with thumbnail */}
                   <div className="flex flex-col">
-                    {/*<div className="relative flex items-center p-4 text-sm rounded-lg group gap-x-6 hover:bg-sky-100">
-                      <a
-                        href="/register"
-                        target="_blank"
-                        className="text-sm lg:text-xl text-wri-blue hover:text-wri-green"
-                      >
-                        Register for WRI 2024
-                      </a>
-                    </div>
                     <div className="relative flex items-center p-4 text-sm rounded-lg group gap-x-6 hover:bg-sky-100">
-                      <a
-                        href="/#schedule"
-                        className="text-sm lg:text-xl text-wri-blue hover:text-wri-green"
-                      >
-                        WRI 2024 Schedule
-                      </a>
-                    </div>*/}
+                      <div className="flex items-center justify-center flex-none rounded-lg h-11 w-11">
+                        <img
+                          src="/WRI25HH-icon.png"
+                          alt="WRI25HH Icon"
+                          className="object-cover w-full h-full rounded-lg"
+                        />
+                      </div>
+                      <div className="flex-auto">
+                        <a
+                          href="https://wri2025hh.wheel-rail-seminars.com/#register"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-sm lg:text-xl text-wri-blue hover:text-wri-green focus:outline-none focus:ring-0"
+                        >
+                          Visit WRI2025 Heavy Haul
+                          <span className="absolute inset-0" />
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Archives link */}
                     <div className="relative flex items-center p-4 text-sm rounded-lg group gap-x-6 hover:bg-sky-100">
                       <a
                         href="http://archive.wheel-rail-seminars.com/us/downloads.php"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="text-sm lg:text-xl text-wri-blue hover:text-wri-green"
                       >
                         WRI Seminar Archives
@@ -160,13 +173,27 @@ export default function Navigation() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          {/*<a
+
+          {/* NEW: Photo Gallery link in main nav (after WRI Seminars) */}
+          <a
+            href="https://wri2024-gallery.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`text-sm leading-6 nav-link lg:text-xl text-wri-blue ${
+              isActive('/photo-gallery') ? 'text-wri-red' : 'text-wri-blue'
+            }`}
+          >
+            Photo Gallery
+          </a>
+
+          {/* Pricing, Hotel, FAQ, etc. */}
+          <a
             href="/#register"
             className={`text-sm leading-6 nav-link lg:text-xl ${
               isActive('/#register') ? 'text-wri-red' : 'text-wri-blue'
             }`}
           >
-            Package Pricing
+            Pricing
           </a>
           <a
             href="/#hotel"
@@ -176,22 +203,6 @@ export default function Navigation() {
           >
             Hotel Reservations
           </a>
-          <a
-            href="/sponsors#icons"
-            className={`text-sm leading-6 nav-link lg:text-xl ${
-              isActive('/sponsors') ? 'text-wri-red' : 'text-wri-blue'
-            }`}
-          >
-            Sponsors
-          </a>
-          <a
-            href="/infozone#icons"
-            className={`text-sm leading-6 nav-link lg:text-xl ${
-              isActive('/infozone') ? 'text-wri-red' : 'text-wri-blue'
-            }`}
-          >
-            InfoZone
-          </a>*/}
           <a
             href="/faq#icons"
             className={`text-sm leading-6 nav-link lg:text-xl ${
@@ -204,21 +215,26 @@ export default function Navigation() {
             href="http://wheel-rail-seminars.com/"
             target="_blank"
             className="text-sm leading-6 nav-link lg:text-xl text-wri-blue"
+            rel="noopener noreferrer"
           >
             Wheel Rail Seminars
           </a>
           <a
             href="http://www.interfacejournal.com/"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-sm leading-6 nav-link min-w-8 min-h-8 lg:text-xl"
           >
             <img
               src="/ij-icon.svg"
               className="w-8 h-8 pr-2"
               alt="Interface Journal"
-            />Interface Journal
+            />
+            Interface Journal
           </a>
         </Popover.Group>
+
+        {/* Mobile Menu */}
         <Dialog
           className="lg:hidden"
           open={mobileMenuOpen}
@@ -239,35 +255,18 @@ export default function Navigation() {
             <div className="flow-root mt-6">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="py-6 space-y-2">
+                  {/* Mobile nav links */}
                   <a
                     href="/"
                     className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
                   >
                     Home
                   </a>
-                  {/*<a
-                    href="/rail-transit-seminar#icons"
-                    className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
-                  >
-                    Rail Transit Seminar
-                  </a>
-                  <a
-                    href="/principles-course#icons"
-                    className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
-                  >
-                    Principles Course
-                  </a>
-                  <a
-                    href="/heavy-haul-seminar#icons"
-                    className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
-                  >
-                    Heavy Haul Seminar
-                  </a>
                   <a
                     href="/#register"
                     className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
                   >
-                    Package Pricing
+                    Pricing
                   </a>
                   <a
                     href="/#hotel"
@@ -276,19 +275,7 @@ export default function Navigation() {
                     Hotel Reservations
                   </a>
                   <a
-                    href="/sponsors#sponsor"
-                    className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
-                  >
-                    Sponsors
-                  </a>
-                  <a
-                    href="/infozone#infozone"
-                    className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
-                  >
-                    InfoZone
-                  </a>*/}
-                  <a
-                    href="/faq#faqs"
+                    href="/faq#icons"
                     className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
                   >
                     FAQ
@@ -296,23 +283,44 @@ export default function Navigation() {
                   <a
                     href="http://archive.wheel-rail-seminars.com/us/downloads.php"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
                   >
-                    Archives
+                    WRI Seminar Archives
                   </a>
                   <a
-                    href="http://wheel-rail-seminars.com"
+                    href="http://wheel-rail-seminars.com/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
                   >
                     Wheel Rail Seminars
                   </a>
                   <a
-                    href="http://interface-journal.com"
+                    href="http://www.interfacejournal.com/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
                   >
                     Interface Journal
+                  </a>
+                  {/* Photo Gallery in mobile menu */}
+                  <a
+                    href="https://wri2024-gallery.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
+                  >
+                    Photo Gallery
+                  </a>
+                  {/* Visit WRI2025 Heavy Haul in mobile menu */}
+                  <a
+                    href="https://wri2025hh.wheel-rail-seminars.com/#register"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-2 text-sm font-semibold leading-7 lg:text-xl text-wri-blue hover:bg-gray-50"
+                  >
+                    Visit WRI2025 Heavy Haul
                   </a>
                 </div>
               </div>
