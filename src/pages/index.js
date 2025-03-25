@@ -1,5 +1,5 @@
 import Navigation from '@/components/navigation';
-import IconsRT from '@/components/icons/iconsRT';
+import IconsRT from '@/components/icons/iconsRT-no-link';
 import Intro from '@/components/intro';
 import CallForPapers from '@/components/call-for-papers'
 import Reviews from '@/components/reviews';
