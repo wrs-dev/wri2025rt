@@ -11,7 +11,9 @@ export default function InfoZoneSection() {
             <ul className="grid">
               <li>
                 <div className="pt-8 text-4xl text-wri-blue">ExpoZone</div>
+                <div className="pt-8 text-4xl text-wri-blue">ExpoZone</div>
                 <span className="block pb-10 text-wri-blue">
+                  {/* removed text but kept yellow underline - temporary */}
                   {/* removed text but kept yellow underline - temporary */}
                 </span>
                 <p>
@@ -19,13 +21,16 @@ export default function InfoZoneSection() {
                   conference venue that serves as a prime location for sponsors
                   to showcase their brands to a highly engaged and diverse
                   audience.{' '}
+                  conference venue that serves as a prime location for sponsors
+                  to showcase their brands to a highly engaged and diverse
+                  audience.{' '}
                 </p>
-                {/*<Link
+                <Link
                   className="pt-4 underline text-wri-red"
-                  href="/2024-Final-Sponsorship-kit.pdf"
+                  href="/sponsor-packages"
                 >
-                  Learn how to become a sponsor [PDF]
-                </Link>*/}
+                  Join the 2025 ExpoZone!
+                </Link>
               </li>
               <li>
                 <figure className="relative w-full h-0 pb-[95.31%]">
@@ -45,7 +50,9 @@ export default function InfoZoneSection() {
             <ul className="grid">
               <li>
                 <div className="pt-8 text-4xl text-wri-blue">InfoZone</div>
+                <div className="pt-8 text-4xl text-wri-blue">InfoZone</div>
                 <span className="block pb-10 text-wri-blue">
+                  {/* removed text but kept yellow underline - temporary */}
                   {/* removed text but kept yellow underline - temporary */}
                 </span>
                 <p>
@@ -53,12 +60,12 @@ export default function InfoZoneSection() {
                   on wheel/rail interaction. These sessions are built into the
                   program and designed for small group interaction.{' '}
                 </p>
-                {/*<Link
+                <Link
                   className="pt-4 underline text-wri-green"
-                  href="/infozone#infozone"
+                  href="/sponsor-packages"
                 >
-                  Visit the InfoZone page!
-                </Link>*/}
+                  Get into the InfoZone!
+                </Link>
               </li>
               <li>
                 <figure className="relative w-full h-0 pb-[95.31%]">

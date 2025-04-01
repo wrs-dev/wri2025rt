@@ -1,10 +1,10 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 export default function sponsorCta() {
   return (
     <main className="bg-white">
-      <div className="px-6 py-24 mx-auto max-w-7xl sm:py-32 lg:px-8">
+      <div className="px-6 py-12 mx-auto max-w-7xl sm:py-24 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Become a Sponsor and see your Logo displayed here.
           <br />

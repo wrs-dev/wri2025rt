@@ -14,31 +14,16 @@ export default function PricingProfessionalMulti() {
         <div className="px-8 pt-6 pb-8">
           <div className="mb-4">
             <h2 className="font-semibold text-md text-blue-950">
-              Rail Transit Seminar <em>Plus</em> Principles Course (2 Days)
+              Rail Transit Seminar <em>Plus</em> Principles Course (3 Days)
             </h2>
             <h2 className="text-md text-wri-blue">
-              Cost: $1,150
+              Cost: 
+              <span className="ml-2 mr-1 text-gray-500 line-through">$1,600</span>
+              $1,440 Early Bird
             </h2>
-            <p className="text-gray-500 text-md">May 21 - 22, 2024</p>
-          </div>
-          <div className="mb-4">
-            <h2 className="font-semibold text-md text-blue-950">
-              Heavy Haul Seminar <em>Plus</em> Principles Course (3 Days)
-            </h2>
-            <h2 className="text-md text-wri-blue">
-              Cost: $1,600
-            </h2>
-            <p className="text-gray-500 text-md">May 22 - 24, 2024</p>
-          </div>
-          <div className="mb-4">
-            <h2 className="font-semibold text-md text-blue-950">
-              Rail Transit Seminar <em>Plus</em> Principles Course <em>Plus</em>{" "}
-              Heavy Haul Seminar Seminar (4 Days)
-            </h2>
-            <h2 className="text-md text-wri-blue">
-              Cost: $1,950
-            </h2>
-            <p className="text-gray-500 text-md">May 21 - 24, 2024</p>
+            <p className="text-gray-500 text-md">
+              August 26–28, 2025
+            </p>
           </div>
         </div>
       </div>

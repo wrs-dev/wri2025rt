@@ -5,28 +5,29 @@ const CventWidget = () => {
 
   useEffect(() => {
     const scriptId = 'cvent-widget-script';
+    // Only add the script if it isn't already present
     if (!document.getElementById(scriptId)) {
       const script = document.createElement('script');
       script.id = scriptId;
       script.async = true;
-      script.src = 'https://web.cvent.com/event_guest/v1/embed/7eff33b4-8236-491a-a81a-c41d4551a6fc.js';
+      script.src = 'https://web.cvent.com/event_guest/v1/embed/b5e71deb-db8d-42cc-8fc5-1c390327d7df.js';
       document.body.appendChild(script);
     }
 
-    // Function to handle incoming postMessage events
+    // Handle postMessage from Cvent to adjust widget height
     const handlePostMessage = (event) => {
       if (event.origin !== 'https://web.cvent.com') return;
 
       const { data } = event;
-      if (data && data.message === 'registrationLoaded' && widgetRef.current) {
+      if (data?.message === 'registrationLoaded' && widgetRef.current) {
         widgetRef.current.style.height = `${data.height}px`;
       }
     };
 
-    // Add the event listener for postMessage events
     window.addEventListener('message', handlePostMessage);
 
     return () => {
+      // Cleanup: remove the script if you want a fresh reload each time
       const existingScript = document.getElementById(scriptId);
       if (existingScript) {
         document.body.removeChild(existingScript);
@@ -35,8 +36,8 @@ const CventWidget = () => {
     };
   }, []);
 
-  // Use className for TailwindCSS styles, and ref for dynamic height adjustments
-  return <div ref={widgetRef} className="w-100 cvt-embed" data-cvt-embed></div>;
+  // The ref is used for dynamic height. "data-cvt-embed" is required by Cvent.
+  return <div ref={widgetRef} className="w-100 cvt-embed" data-cvt-embed />;
 };
 
 export default CventWidget;

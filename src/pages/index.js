@@ -1,13 +1,15 @@
 import Navigation from '@/components/navigation';
-import IconsRT from '@/components/icons/iconsRT-no-link';
-import Intro from '@/components/intro';
-import CallForPapers from '@/components/call-for-papers'
-import Reviews from '@/components/reviews';
 import Banner25RT from '@/components/banner/wri25RT';
+import IconsRT from '@/components/icons/iconsRT-nolink';
+import Intro from '@/components/intro';
+import Registration from '@/components/registration';
+import SponsorCTA2 from '@/components/sponsors/sponsor-cta-2';
+import Reviews from '@/components/reviews';
 import InfoZoneSection from '@/components/infozone/infoZoneSection';
 import InterfaceJournal from '@/components/interface-journal';
 import WRIAnnouncements from '@/components/announcements';
 import SponsorsCloud from '@/components/sponsors';
+import Hotel from '@/components/hotel';
 
 export async function getStaticProps() {
   return {
@@ -20,15 +22,17 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ title, description, socialImage }) {
+export default function Home() {
   return (
     <main className="bg-white">
       <Navigation />
       <Banner25RT />
       <h3 className="mt-12 mb-6 text-xl font-light text-center sm:text-4xl font-wri">
       Speakers and agenda to be announced soon!
-      </h3>
+        </h3>
       <IconsRT />
+
+      {/* About Section (keeps your existing RT text) */}
       <div className="pb-40 about-container font-wri" id="about">
         <h1 className="mt-2 mb-2 text-2xl font-extrabold text-center sm:text-5xl font-wri">
           Welcome to WRI <span className="font-light font-wri">2025</span> RT{' '}
@@ -37,51 +41,27 @@ export default function Home({ title, description, socialImage }) {
           Rail Transit Conference
         </h2>
         <p className="mb-6 justify-left">
-          Now in its 30th year, Wheel Rail Seminars is thrilled to announce some
-          exciting developments for the upcoming WRI Conference in 2025! To
-          better cater to the diverse needs of our attendees, the WRI Conference
-          will split into two specialized conferences:
-        </p>
-        <p className="mb-6">
-          <span className="font-extrabold font-wri text-wri-red">
-            <a className="font-extrabold font-wri text-wri-red" href="https://wri2025hh.wheel-rail-seminars.com/" target="_blank">WRI 2025 Heavy Haul Conference:</a>
-          </span>{' '}
-          Specifically tailored for the heavy haul (freight) sector, focusing on
-          the unique challenges and advancements in this area of the railroad
-          industry. Next year, the WRI 2025 Heavy Haul Conference will be held
-          in{' '}
-          <span className="font-extrabold font-wri">
-            Kansas City, MO from June 10-12, 2025.
-          </span>
-        </p>
-        <p className="mb-6">
+          Welcome to the 30th Anniversary of the Wheel Rail Interaction
+          Conference.{' '}
           <span className="font-extrabold font-wri text-wri-blue">
-            WRI 2025 Rail Transit Conference:
+            WRI 2025 Rail Transit Conference
           </span>{' '}
-          Devoted to examining wheel/rail and vehicle/track interaction on light
-          rail and subway operations. Next year, the WRI 2025 Rail Transit
-          Conference will be held in{' '}
+          is devoted to examining wheel/rail and vehicle/track interaction on light rail and subway operations. The conference will be held in{' '}
           <span className="font-extrabold font-wri">
-            Seattle, WA from August 26-28, 2025.
+          Seattle, WA from August 26-28, 2025.{' '}
           </span>
-        </p>
-        <p className="mb-6">
-          Each conference will feature a comprehensive Principles Course
-          meticulously crafted to meet the distinct needs of each discipline. We
-          believe this division will provide an enriched experience for all
-          participants, allowing for deeper insight, targeted discussions, and
-          enhanced networking opportunities.
-        </p>
-        <p className="mb-6">
-          Join us for these exceptional events designed to propel the railroad
-          community forward. Stay tuned for further updates and details on
-          registration!
+          Attendees will be from commuter rail systems, contractors, government regulators, researchers and consultants.
         </p>
       </div>
+
       <Intro />
       <CallForPapers />
-      <Reviews />
+      <Registration />
       <InfoZoneSection />
+      <SponsorCTA2 />
+      <Reviews />
+
+      {/* Two-column layout for Interface Journal & Announcements */}
       <section className="my-12">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
@@ -90,7 +70,9 @@ export default function Home({ title, description, socialImage }) {
           </div>
         </div>
       </section>
-      <SponsorsCloud />
+      <Hotel />
+      {/* Temporarily remove sponsor cloud (commented out) */}
+      {/* <SponsorsCloud /> */}
     </main>
   );
 }
