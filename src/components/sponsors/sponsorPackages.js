@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 // If you have different sponsor registration button components for RT, import them here.
 // Otherwise, reuse or rename them as needed (e.g., SponsorRegisterButtonSilver -> SponsorRegisterButtonRTSilver, etc.)
-import SponsorRegisterButtonSilver from '@/components/buttons/sponsor-register-button-silver';
-import SponsorRegisterButtonGold from '@/components/buttons/sponsor-register-button-gold';
-import SponsorRegisterButtonPlatinum from '@/components/buttons/sponsor-register-button-platinum';
-import SponsorRegisterButtonInfoZone from '@/components/buttons/sponsor-register-button-infozone';
+import SponsorRegisterButtonSilver from '@/components/buttons/sponsor-register-button-silver-prod';
+import SponsorRegisterButtonGold from '@/components/buttons/sponsor-register-button-gold-prod';
+import SponsorRegisterButtonPlatinum from '@/components/buttons/sponsor-register-button-platinum-prod';
+import SponsorRegisterButtonInfoZone from '@/components/buttons/sponsor-register-button-infozone-prod';
 import SponsorCtaPdf from '@/components/sponsors/sponsor-cta-pdf';
 
 export default function SponsorPackages() {
