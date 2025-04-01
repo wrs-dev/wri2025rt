@@ -86,7 +86,7 @@ const Header = () => {
               className="relative top-[-1px]"
             >
               <img
-                src="/MassTransit-PresentingSponsor.png"
+                src="/mass-transit-presenting-sponsor.webp"
                 alt="Mass Transit Logo"
                 style={{ display: 'block' }}
                 className="w-[115px] h-auto"
