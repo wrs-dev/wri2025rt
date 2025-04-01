@@ -1,4 +1,4 @@
-import { FacebookIcon, TwitterIcon, LinkedInIcon } from './icons';
+import { FacebookIcon, TwitterIcon, LinkedInIcon } from './Icons';
 
 const socialLinks = [
   { name: 'Facebook', href: 'https://www.facebook.com/WheelRailSeminars', icon: FacebookIcon },
