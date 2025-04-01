@@ -2,6 +2,7 @@ import Navigation from '@/components/navigation';
 import Banner25RT from '@/components/banner/wri25RT';
 import IconsRT from '@/components/icons/iconsRT-nolink';
 import Intro from '@/components/intro';
+import CallForPapers from '@/components/call-for-papers';
 import Registration from '@/components/registration';
 import SponsorCTA2 from '@/components/sponsors/sponsor-cta-2';
 import Reviews from '@/components/reviews';
