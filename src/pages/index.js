@@ -1,5 +1,5 @@
 import Navigation from '@/components/navigation';
-import Banner25RT from '@/components/banner/wri25RT';
+import Banner25RT30th from '@/components/banner/wri25RT-30th';
 import IconsRT from '@/components/icons/iconsRT-nolink';
 import Intro from '@/components/intro';
 import CallForPapers from '@/components/call-for-papers';
@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <main className="bg-white">
       <Navigation />
-      <Banner25RT />
+      <Banner25RT30th />
       <h3 className="mt-12 mb-6 text-xl font-light text-center sm:text-4xl font-wri">
       Speakers and agenda to be announced soon!
         </h3>

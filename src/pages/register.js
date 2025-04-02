@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Navigation from '@/components/navigation';
-import Banner25RT from '@/components/banner/wri25RT-no-button'; 
+import Banner25RT30th from '@/components/banner/wri25RT-30th-no-button'; 
 import CventWidget from '@/components/CventWidget-prod';
 
 export async function getStaticProps() {
@@ -19,7 +19,7 @@ export default function Register() {
     <main className="bg-white">
       <Navigation />
       {/* Simple banner with no "Register" button included */}
-      <Banner25RT />
+      <Banner25RT30th />
       {/* Embedded Cvent widget */}
       <CventWidget className="cvt-embed" />
     </main>
