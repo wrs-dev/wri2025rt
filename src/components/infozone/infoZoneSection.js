@@ -11,9 +11,7 @@ export default function InfoZoneSection() {
             <ul className="grid">
               <li>
                 <div className="pt-8 text-4xl text-wri-blue">ExpoZone</div>
-                <div className="pt-8 text-4xl text-wri-blue">ExpoZone</div>
                 <span className="block pb-10 text-wri-blue">
-                  {/* removed text but kept yellow underline - temporary */}
                   {/* removed text but kept yellow underline - temporary */}
                 </span>
                 <p>
@@ -50,9 +48,7 @@ export default function InfoZoneSection() {
             <ul className="grid">
               <li>
                 <div className="pt-8 text-4xl text-wri-blue">InfoZone</div>
-                <div className="pt-8 text-4xl text-wri-blue">InfoZone</div>
                 <span className="block pb-10 text-wri-blue">
-                  {/* removed text but kept yellow underline - temporary */}
                   {/* removed text but kept yellow underline - temporary */}
                 </span>
                 <p>
