@@ -2,11 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
-import Banner from '@/components/banner';
-import IconLinks from '@/components/icons';
+import Banner25RT30th from '@/components/banner/wri25RT-30th';
+import IconLinks from '@/components/icons/iconsRT';
 import Navigation from '@/components/navigation';
-import FeatureSpeaker from '@/components/speakers/featureSpeaker';
-import FocusTopicRT from '@/components/speakers/focusTopicRT';
+{/*import FeatureSpeaker from '@/components/speakers/featureSpeaker';*/}
+{/*import FocusTopicRT from '@/components/speakers/focusTopicRT';*/}
 import SpeakersRT from '@/components/speakers/speakersRT';
 import Registration from '@/components/registration';
 import SponsorsCloud from '@/components/sponsors';
@@ -14,9 +14,9 @@ import SponsorsCloud from '@/components/sponsors';
 export async function getStaticProps() {
   return {
     props: {
-      title: "WRI 2024 | Rail Transit Seminar Speakers",
-      description: "Speakers for the 29th Annual Wheel/Rail Interaction Conference (WRI)",
-      socialImage: "/wri2024-social.png" 
+      title: "WRI 2025 | Rail Transit Seminar Speakers",
+      description: "Speakers for the 30th Annual Wheel/Rail Interaction Conference (WRI)",
+      socialImage: "/wri2025-social.png" 
     }
   };
 }
@@ -25,19 +25,19 @@ const RailTransitSeminarPage = () => {
   return (
     <main className="bg-white">
       <Navigation />
-      <Banner />
+      <Banner25RT30th />
       <IconLinks />
       <div className="section">
         <div className="mx-auto">
           <h2 className="text-5xl font-normal text-center pb-11">
             Meet the{' '}
             <span className="text-wri-blue">
-              <b>2024 Rail Transit Seminar</b>
+              <b>2025 Rail Transit Seminar</b>
             </span>{' '}
             Speakers
           </h2>
-          <FeatureSpeaker />
-          <FocusTopicRT />
+          {/*<FeatureSpeaker />*/}
+          {/*<FocusTopicRT />*/}
           <SpeakersRT />
           <div className="flex flex-wrap justify-center">
             <div className="w-full px-4 mx-auto mb-24 max-w-7xl">
@@ -45,11 +45,11 @@ const RailTransitSeminarPage = () => {
                 <div className="w-full px-4 mb-6 lg:w-4/6 lg:pr-24">
                   <h2 className="text-5xl font-normal leading-normal text-center">
                     <span className="text-wri-blue">
-                      <b>2024 Rail Transit Seminar</b>
+                      <b>2025 Rail Transit Seminar</b>
                     </span>
                   </h2>
                   <h3 className="text-3xl font-normal leading-normal text-center pb-11">
-                    May 21, 2024
+                    August 27-28, 2025
                   </h3>
                   <p className="pt-2 pb-6">
                     <span className="font-bold text-wri-blue">

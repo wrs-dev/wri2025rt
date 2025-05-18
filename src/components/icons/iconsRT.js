@@ -6,39 +6,37 @@ import { useMemo } from 'react';
 const IconLinksRT = () => {
   const router = useRouter();
 
-  const icons = useMemo(
-    () => [
-      {
-        href: '#',
-        src: '/principles-icon.svg',
-        title: 'Principles Course',
-        date: 'August 26, 2025',
-        hoverBorderColor: 'hover:border-wri-yellow',
-        hoverBgColor: 'hover:bg-wri-green',
-      },
-      {
-        href: '#',
-        src: '/rail-transit.svg',
-        title: 'Rail Transit Seminar',
-        date: 'August 27-28, 2025',
-        hoverBorderColor: 'hover:border-wri-red',
-        hoverBgColor: 'hover:bg-wri-blue',
-      },
-    ],
-    [],
-  );
-
   const getRestingBackgroundColor = useMemo(() => {
-    const backgrounds = ['bg-wri-green', 'bg-wri-blue', 'bg-wri-red'];
-    if (router.pathname.includes('rail-transit')) {
-      backgrounds[1] = backgrounds[2] = 'bg-wri-neutral';
-    } else if (router.pathname.includes('principles-course')) {
-      backgrounds[0] = backgrounds[2] = 'bg-wri-neutral';
-    } else if (router.pathname.includes('heavy-haul')) {
-      backgrounds[0] = backgrounds[1] = 'bg-wri-neutral';
+    if (router.pathname.includes('principles-course')) {
+      return ['bg-wri-green', 'bg-wri-neutral'];
+    } else if (router.pathname.includes('rail-transit-seminar')) {
+      return ['bg-wri-neutral', 'bg-wri-blue'];
     }
-    return backgrounds;
+
+    return ['bg-wri-green', 'bg-wri-blue'];
   }, [router.pathname]);
+
+  const icons = useMemo(
+  () => [
+    {
+      href: 'principles-course',
+      src: '/principles-icon.svg',
+      title: 'Principles Course',
+      date: 'August 26, 2025',
+      hoverBorderColor: 'hover:border-wri-yellow',
+      hoverBgColor: 'hover:bg-wri-green',
+    },
+    {
+      href: 'rail-transit-seminar',
+      src: '/rail-transit.svg',
+      title: 'Rail Transit Seminar',
+      date: 'August 27-28, 2025',
+      hoverBorderColor: 'hover:border-wri-green',
+      hoverBgColor: 'hover:bg-wri-blue',
+    },
+  ],
+  [],
+);
 
   return (
     <div className="btn_wrapper" data-aos="fade-up" id="icons">
