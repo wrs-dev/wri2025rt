@@ -1,6 +1,6 @@
 import Navigation from '@/components/navigation';
 import Banner25RT30th from '@/components/banner/wri25RT-30th';
-import IconsRT from '@/components/icons/iconsRT-nolink';
+import IconsRT from '@/components/icons/iconsRT';
 import Intro from '@/components/intro';
 {/* import CallForPapers from '@/components/call-for-papers'; */}
 import Registration from '@/components/registration';
